@@ -1,0 +1,180 @@
+@import '../../styles/variables'
+
+.Product
+  .Card
+    position: relative
+    min-height: 480px
+    background-color: $colorPrimary
+    padding: 20px 48px
+    cursor: pointer
+    overflow: hidden
+    &.hover
+      background-color: $colorPrimaryHover
+      .Weight
+        background-color: $colorPrimaryHover
+
+    &.active
+      background-color: $colorSecondary
+      .Tagline
+        &.hover
+          color: $colorNegative
+      .Weight
+        background-color: $colorSecondary
+
+    &.active:hover
+      background-color: $colorSecondaryHover
+      .Weight
+        background-color: $colorSecondaryHover
+
+  .Background,
+  .BackgroundImage
+    position: absolute
+    top: 50%
+    left: 50%
+    width: calc(100% - 8px)
+    height: calc(100% - 8px)
+    transform: translate(-50%, -50%)
+    z-index: -1
+
+  .Background
+    background-color: $colorBackground
+
+  .BackgroundImage
+    background-repeat: no-repeat
+    background-size: 368px 368px
+    background-position: 52% 192%
+    transform: translate(-50%, -50%)
+
+  .Card,
+  .Background,
+  .BackgroundImage
+    clip-path: polygon(13.5% 0%, 100% 0, 100% 100%, 0 100%, 0% 9%)
+    border-radius: 13px
+
+  .Tagline
+    font-size: 16px
+    line-height: 19px
+    color: $colorGray
+    margin-top: 0
+    margin-bottom: 5px
+
+  .Title
+    font-size: 48px
+    font-weight: 700
+    line-height: 56px
+    margin: 0
+
+  .Filling
+    font-size: 24px
+    font-weight: 700
+    line-height: 28px
+    margin-top: 0
+    margin-bottom: 15px
+
+  .Servings,
+  .Gift,
+  .Сlarification
+    font-size: 14px
+    line-height: 16px
+    color: $colorGray
+    margin: 0
+
+  .ServingsCount,
+  .GiftCount
+    font-weight: 700
+
+  .Weight
+    position: absolute
+    right: 16px
+    bottom: 16px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 80px
+    height: 80px
+    background-color: $colorPrimary
+    border-radius: 50%
+    transition: background-color .3s ease
+
+    .WeightCount
+      font-size: 42px
+      line-height: 0.85
+      color: $colorWhite
+      margin-top: 4px
+
+    .WeightUnit
+      font-size: 21px
+      line-height: 22px
+      text-transform: lowercase
+      color: $colorWhite
+
+  .Offer
+    margin-top: 14px
+    font-size: 13px
+    line-height: 15px
+    text-align: center
+    color: $colorWhite
+    .OfferText
+      &.disabled
+        color: $colorYellow
+
+    .Btn
+      padding: 0
+      color: $colorPrimary
+      background-color: transparent
+      border: none
+      cursor: pointer
+      &.hover
+        color: $colorBtnHover
+        .BtnWord
+          border-bottom-color: $colorBtnHover
+      .BtnWord
+        border-bottom: 1px dashed $colorPrimary
+
+  &.disabled
+    .Card
+      background-color: $colorDisabled
+      pointer-events: none
+
+    .Tagline,
+    .Title,
+    .Filling,
+    .Servings,
+    .Gift,
+    .Сlarification
+      color: $colorDisabled
+
+    .BackgroundImage
+      opacity: .5
+
+    .Weight
+      background-color: $colorDisabled
+
+@media screen and (max-width: 1120px)
+  .Product
+    &:first-child
+      grid-column-start: 2
+      grid-row-start: 1
+    &:nth-child(2)
+      grid-column-start: 1
+      grid-row-start: 2
+    &:last-child
+      grid-column-start: 3
+      grid-row-start: 2
+
+    .Title
+      font-size: 38px
+      line-height: 46px
+
+    .Tagline
+      font-size: 14px
+      line-height: 16px
+
+@media screen and (max-width: 944px)
+  .Product
+    &:first-child,
+    &:nth-child(2),
+    &:last-child
+      grid-column-start: 1
+      grid-row-start: auto

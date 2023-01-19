@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "tagline": "Сказочное заморское яство",
+    "taglineNegative": "Котэ не одобряет?",
+    "title": "Нямушка",
+    "filling": "с фуа-гра",
+    "servingsCount": 10,
+    "servingsWords": ["порция", "порции", "порций"],
+    "giftCount": 1,
+    "giftWords": ["мышь", "мыши", "мышей"],
+    "clarification": "",
+    "weight": "0,5",
+    "weightUnit": "кг",
+    "description": "Печень утки разварная с артишоками.",
+    "disabled": false
+  },
+  {
+    "id": 2,
+    "tagline": "Сказочное заморское яство",
+    "taglineNegative": "Котэ не одобряет?",
+    "title": "Нямушка",
+    "filling": "с рыбой",
+    "servingsCount": 40,
+    "servingsWords": ["порция", "порции", "порций"],
+    "giftCount": 2,
+    "giftWords": ["мышь", "мыши", "мышей"],
+    "clarification": "",
+    "weight": "2",
+    "weightUnit": "кг",
+    "description": "Головы щучьи с чесноком да свежайшая сёмгушка.",
+    "disabled": false
+  },
+  {
+    "id": 3,
+    "tagline": "Сказочное заморское яство",
+    "taglineNegative": "Котэ не одобряет?",
+    "title": "Нямушка",
+    "filling": "с курой",
+    "servingsCount": 100,
+    "servingsWords": ["порция", "порции", "порций"],
+    "giftCount": 5,
+    "giftWords": ["мышь", "мыши", "мышей"],
+    "clarification": "заказчик доволен",
+    "weight": "5",
+    "weightUnit": "кг",
+    "description": "Филе из цыплят с трюфелями в бульоне.",
+    "disabled": true
+  }
+]
